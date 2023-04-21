@@ -1,0 +1,17 @@
+html {
+    scroll-behavior: smooth;
+}
+::selection {
+    background: var(--pink-color);
+    color: white;
+}
+* {
+    box-sizing: border-box;
+    font-family: 'Raleway', sans-serif;
+}
+
+:root {
+    --pink-color: #FF599D;
+    --violet-color: #8261EA;
+    --desc-color: #B2B2B2;
+}
