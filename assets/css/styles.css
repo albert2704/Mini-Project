@@ -580,6 +580,7 @@ form .name, .email {
     border-radius: 25px;
     padding: 10px 20px;
     margin-bottom: 35px;
+    outline: none;
 }
 form .message {
     flex-basis: 100%;
@@ -588,6 +589,7 @@ form .message {
     height: 150px;
     padding: 20px 0 0 20px;
     resize: none;
+    outline: none;
     margin-bottom: 35px;
 }
 form .send-btn {
