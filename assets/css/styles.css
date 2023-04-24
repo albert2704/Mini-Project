@@ -150,6 +150,11 @@ header #Home {
     background: var(--pink-color);
     transition: .3s;
 }
+@media screen and (max-width: 991.98px) {
+    .func {
+        margin-top: 0;
+    }
+}
 /* End Func Section */
 
 /* About Section */
