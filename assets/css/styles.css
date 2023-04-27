@@ -522,6 +522,7 @@ header #Home {
     font-size: 15px;
 }
 .blog__box  .box__btn {
+    display: inline-block;
     color: white;
     font-size: 14px;
     margin: 30px auto 0 auto;
@@ -534,6 +535,7 @@ header #Home {
 .blog__box  .box__btn:hover {
     background: var(--pink-color);
     transition: .5s;
+    text-decoration: none;
 }
 @media screen and (max-width: 991.98px) {
     .blog__desc {
@@ -544,6 +546,7 @@ header #Home {
         font-weight: 200;
     }
 }
+/* End Blog Section */
 /* Contact Section */
 .contact {
     scroll-margin-top: 125px;
