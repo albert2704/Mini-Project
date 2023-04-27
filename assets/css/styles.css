@@ -401,6 +401,9 @@ header #Home {
 .plans__box .box__list li {
     margin-bottom: 10px;
 }
+.plans .delete {
+    text-decoration: line-through !important;
+}
 .plans__box .box__btn {
     font-size: 14px;
     display: inline-block;
