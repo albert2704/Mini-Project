@@ -482,6 +482,11 @@ header #Home {
         display: none;
     }
 }
+@media screen and (max-width: 767.98px) {
+    .box-parent:hover .rate__box {
+        margin-top: 0px;
+    }
+}
 /* End Rate Section */
 
 /* Blog Section */
