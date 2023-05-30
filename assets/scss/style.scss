@@ -15,6 +15,10 @@ html {
     font-family: 'Raleway', sans-serif;
 }
 
+.hidden {
+    display: none !important;
+}
+
 header {
     position: fixed;
     top: 30px;
@@ -24,21 +28,57 @@ header {
     width: 100%;
 
     nav {
-        display: flex;
-        justify-content: space-between;
-        width: 100%;
-        padding: 0 30px;
-        min-height: 80px;
-        border-radius: 40px;
         background-color: #fff;
-        align-items: center;
+        width: 100%;
+        border-radius: 40px;
+        min-height: 80px;
+        padding: 10px 30px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        .main-nav {
+            width: 100%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            
+            .nav-child {
+                a {
+                    text-decoration: none;
+                    color: black;
+                    padding: 10px;
+                    font-size: 14px;
+                    
+                    &:hover {
+                        color: $pink-color;
+                        transition: .5s;
+                    }
 
-        .nav-child {
+                    &:active {
+                        color: $pink-color;
+                    }
+                }
+
+                #hidden-menu, #hidden-exit {
+                    display: none;
+                    font-size: 25px;
+                    cursor: pointer;
+                }
+
+                #Home {
+                    color: $pink-color;
+                }
+            }
+        }
+        .nav-hidden {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
             a {
                 text-decoration: none;
                 color: black;
                 padding: 10px;
-                font-size: 14px;
+                font-size: 20px;
                 
                 &:hover {
                     color: $pink-color;
@@ -49,30 +89,24 @@ header {
                     color: $pink-color;
                 }
             }
-
-            i {
-                display: none;
-            }
-
-            #Home {
-                color: $pink-color;
-            }
         }
     }
 }
 
 @media screen and (max-width: 991.98px) {
     header {
-        .nav-child {
-            a {
-                display: none;
+        nav {
+            .main-nav {
+                .nav-child {
+                    a {
+                        display: none;
+                    }
+        
+                    #hidden-menu, #hidden-exit {
+                        display: block; 
+                    } 
+                }
             }
-
-            i {
-                display: block;
-                font-size: 25px;
-                cursor: pointer;
-            } 
         }
     }
 }

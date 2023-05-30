@@ -12,6 +12,10 @@ html {
   font-family: "Raleway", sans-serif;
 }
 
+.hidden {
+  display: none !important;
+}
+
 header {
   position: fixed;
   top: 30px;
@@ -21,43 +25,67 @@ header {
   width: 100%;
 }
 header nav {
+  background-color: #fff;
+  width: 100%;
+  border-radius: 40px;
+  min-height: 80px;
+  padding: 10px 30px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+header nav .main-nav {
+  width: 100%;
   display: flex;
   justify-content: space-between;
-  width: 100%;
-  padding: 0 30px;
-  min-height: 80px;
-  border-radius: 40px;
-  background-color: #fff;
   align-items: center;
 }
-header nav .nav-child a {
+header nav .main-nav .nav-child a {
   text-decoration: none;
   color: black;
   padding: 10px;
   font-size: 14px;
 }
-header nav .nav-child a:hover {
+header nav .main-nav .nav-child a:hover {
   color: #FF599D;
   transition: 0.5s;
 }
-header nav .nav-child a:active {
+header nav .main-nav .nav-child a:active {
   color: #FF599D;
 }
-header nav .nav-child i {
+header nav .main-nav .nav-child #hidden-menu, header nav .main-nav .nav-child #hidden-exit {
   display: none;
+  font-size: 25px;
+  cursor: pointer;
 }
-header nav .nav-child #Home {
+header nav .main-nav .nav-child #Home {
+  color: #FF599D;
+}
+header nav .nav-hidden {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+header nav .nav-hidden a {
+  text-decoration: none;
+  color: black;
+  padding: 10px;
+  font-size: 20px;
+}
+header nav .nav-hidden a:hover {
+  color: #FF599D;
+  transition: 0.5s;
+}
+header nav .nav-hidden a:active {
   color: #FF599D;
 }
 
 @media screen and (max-width: 991.98px) {
-  header .nav-child a {
+  header nav .main-nav .nav-child a {
     display: none;
   }
-  header .nav-child i {
+  header nav .main-nav .nav-child #hidden-menu, header nav .main-nav .nav-child #hidden-exit {
     display: block;
-    font-size: 25px;
-    cursor: pointer;
   }
 }
 /* END HEADER */
