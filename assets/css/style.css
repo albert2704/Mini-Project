@@ -25,6 +25,7 @@ header {
   width: 100%;
 }
 header nav {
+  transition: all 0.5s;
   background-color: #fff;
   width: 100%;
   border-radius: 40px;
@@ -657,7 +658,7 @@ header nav .nav-hidden a:active {
 }
 
 @media screen and (max-width: 991.98px) {
-  form .name, form .email {
+  .contact__box form .name, .contact__box form .email {
     flex-basis: 100%;
   }
   .contact__desc {

@@ -28,6 +28,7 @@ header {
     width: 100%;
 
     nav {
+        transition: all .5s;
         background-color: #fff;
         width: 100%;
         border-radius: 40px;
@@ -792,13 +793,19 @@ header {
 }
 
 @media screen and (max-width: 991.98px) {
-    form {
-        .name, .email{
-            flex-basis: 100%;
+    .contact {
+        &__box {
+            form {
+                .name, .email{
+                    flex-basis: 100%;
+                }
+            }
         }
     }
-    .contact__desc {
-        padding: 0 10%;
+    .contact {
+        &__desc {
+            padding: 0 10%;
+        }
     }
 }
 
