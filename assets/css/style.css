@@ -12,10 +12,6 @@ html {
   font-family: "Raleway", sans-serif;
 }
 
-.open {
-  display: block !important;
-}
-
 header {
   position: fixed;
   top: 30px;
@@ -25,6 +21,7 @@ header {
   width: 100%;
 }
 header nav {
+  position: relative;
   background-color: #fff;
   width: 100%;
   border-radius: 40px;
@@ -63,6 +60,13 @@ header nav .main-nav .nav-child #Home {
 }
 
 @media screen and (max-width: 991.98px) {
+  header nav {
+    box-shadow: 0px 0px 7px 1px rgba(0, 0, 0, 0.1);
+  }
+  header nav.main-active {
+    border-bottom-left-radius: 0;
+    border-bottom-right-radius: 0;
+  }
   header nav .main-nav {
     flex-wrap: wrap;
   }
@@ -79,9 +83,21 @@ header nav .main-nav .nav-child #Home {
     display: none !important;
   }
   header nav .main-nav .nav-child {
-    display: none;
+    box-shadow: 0px 3px 6px 0px rgba(0, 0, 0, 0.1);
+    position: absolute;
+    top: 53px;
+    left: 0;
+    height: 0;
+    overflow: hidden;
+    border-radius: 30px;
+    width: 100%;
+    background-color: #fff;
     margin: auto;
     text-align: center;
+  }
+  header nav .main-nav .nav-child.active {
+    height: 373px;
+    transition: height 0.9s;
   }
   header nav .main-nav .nav-child.hidden {
     display: none !important;
