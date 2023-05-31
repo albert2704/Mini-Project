@@ -31,5 +31,8 @@ hiddenExit.addEventListener('click', () => {
     navHidden.classList.remove('active');
     nav.classList.remove('main-active');
 })
+window.onscroll = () => {
+    document.getElementById('Home').style.color = "black";
+}
 
 
