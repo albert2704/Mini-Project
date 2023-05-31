@@ -15,8 +15,8 @@ html {
     font-family: 'Raleway', sans-serif;
 }
 
-.hidden {
-    display: none !important;
+.open {
+    display: block !important;
 }
 
 header {
@@ -42,6 +42,12 @@ header {
             align-items: center;
             margin-top: 13px;
             
+            #hidden-menu, #hidden-exit {
+                display: none;
+                font-size: 25px;
+                cursor: pointer;
+            }
+
             .nav-child {
                 a {
                     text-decoration: none;
@@ -59,33 +65,8 @@ header {
                     }
                 }
 
-                #hidden-menu, #hidden-exit {
-                    display: none;
-                    font-size: 25px;
-                    cursor: pointer;
-                }
 
                 #Home {
-                    color: $pink-color;
-                }
-            }
-        }
-        .nav-hidden {
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            a {
-                text-decoration: none;
-                color: black;
-                padding: 10px;
-                font-size: 20px;
-                
-                &:hover {
-                    color: $pink-color;
-                    transition: .5s;
-                }
-
-                &:active {
                     color: $pink-color;
                 }
             }
@@ -97,14 +78,38 @@ header {
     header {
         nav {
             .main-nav {
-                .nav-child {
-                    a {
-                        display: none;
-                    }
-        
+                flex-wrap: wrap;
+                .top-header {
+                    display: flex;
+                    justify-content: space-between;
+                    width: 100%;  
+                    align-items: center;
                     #hidden-menu, #hidden-exit {
                         display: block; 
                     } 
+                    .hidden {
+                        display: none !important;
+                    }
+                }
+
+                .nav-child {
+                    display: none;
+                    margin: auto;
+                    text-align: center;
+                    &.hidden {
+                        display: none !important;
+                    }
+                    a {
+                        display: block;
+                        font-size: 20px;
+                    }
+                    #Home {
+                        color: black;
+                        &:hover {
+                            color: $pink-color;
+                            transition: .5s;
+                        }
+                    }
                 }
             }
         }

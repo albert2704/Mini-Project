@@ -12,8 +12,8 @@ html {
   font-family: "Raleway", sans-serif;
 }
 
-.hidden {
-  display: none !important;
+.open {
+  display: block !important;
 }
 
 header {
@@ -40,6 +40,11 @@ header nav .main-nav {
   align-items: center;
   margin-top: 13px;
 }
+header nav .main-nav #hidden-menu, header nav .main-nav #hidden-exit {
+  display: none;
+  font-size: 25px;
+  cursor: pointer;
+}
 header nav .main-nav .nav-child a {
   text-decoration: none;
   color: black;
@@ -53,39 +58,44 @@ header nav .main-nav .nav-child a:hover {
 header nav .main-nav .nav-child a:active {
   color: #FF599D;
 }
-header nav .main-nav .nav-child #hidden-menu, header nav .main-nav .nav-child #hidden-exit {
-  display: none;
-  font-size: 25px;
-  cursor: pointer;
-}
 header nav .main-nav .nav-child #Home {
-  color: #FF599D;
-}
-header nav .nav-hidden {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-}
-header nav .nav-hidden a {
-  text-decoration: none;
-  color: black;
-  padding: 10px;
-  font-size: 20px;
-}
-header nav .nav-hidden a:hover {
-  color: #FF599D;
-  transition: 0.5s;
-}
-header nav .nav-hidden a:active {
   color: #FF599D;
 }
 
 @media screen and (max-width: 991.98px) {
-  header nav .main-nav .nav-child a {
-    display: none;
+  header nav .main-nav {
+    flex-wrap: wrap;
   }
-  header nav .main-nav .nav-child #hidden-menu, header nav .main-nav .nav-child #hidden-exit {
+  header nav .main-nav .top-header {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    align-items: center;
+  }
+  header nav .main-nav .top-header #hidden-menu, header nav .main-nav .top-header #hidden-exit {
     display: block;
+  }
+  header nav .main-nav .top-header .hidden {
+    display: none !important;
+  }
+  header nav .main-nav .nav-child {
+    display: none;
+    margin: auto;
+    text-align: center;
+  }
+  header nav .main-nav .nav-child.hidden {
+    display: none !important;
+  }
+  header nav .main-nav .nav-child a {
+    display: block;
+    font-size: 20px;
+  }
+  header nav .main-nav .nav-child #Home {
+    color: black;
+  }
+  header nav .main-nav .nav-child #Home:hover {
+    color: #FF599D;
+    transition: 0.5s;
   }
 }
 /* END HEADER */
