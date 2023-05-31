@@ -25,7 +25,6 @@ header {
   width: 100%;
 }
 header nav {
-  transition: all 0.5s;
   background-color: #fff;
   width: 100%;
   border-radius: 40px;
@@ -33,13 +32,13 @@ header nav {
   padding: 10px 30px;
   display: flex;
   flex-direction: column;
-  justify-content: center;
 }
 header nav .main-nav {
   width: 100%;
   display: flex;
   justify-content: space-between;
   align-items: center;
+  margin-top: 13px;
 }
 header nav .main-nav .nav-child a {
   text-decoration: none;

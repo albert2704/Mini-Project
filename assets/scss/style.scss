@@ -28,7 +28,6 @@ header {
     width: 100%;
 
     nav {
-        transition: all .5s;
         background-color: #fff;
         width: 100%;
         border-radius: 40px;
@@ -36,12 +35,12 @@ header {
         padding: 10px 30px;
         display: flex;
         flex-direction: column;
-        justify-content: center;
         .main-nav {
             width: 100%;
             display: flex;
             justify-content: space-between;
             align-items: center;
+            margin-top: 13px;
             
             .nav-child {
                 a {
