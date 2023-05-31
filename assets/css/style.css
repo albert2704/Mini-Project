@@ -97,7 +97,7 @@ header nav .main-nav .nav-child #Home {
   }
   header nav .main-nav .nav-child.active {
     height: 373px;
-    transition: height 0.9s;
+    transition: height 0.3s;
   }
   header nav .main-nav .nav-child.hidden {
     display: none !important;
