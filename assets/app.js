@@ -3,6 +3,13 @@ let hiddenExit = document.querySelector('#hidden-exit');
 let navHidden = document.querySelectorAll('.nav-child')[0];
 let hiddenClick = document.querySelectorAll('.nav-child a');
 let nav = document.querySelector('nav');
+let logo = document.querySelector('.logo');
+logo.addEventListener('click', () => {
+    hiddenMenu.classList.remove('hidden');
+    hiddenExit.classList.add('hidden');
+    navHidden.classList.remove('active');
+    nav.classList.remove('main-active');
+})
 hiddenClick.forEach((item) => {
     item.addEventListener('click', () => {
         hiddenMenu.classList.remove('hidden');
